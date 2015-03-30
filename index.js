@@ -5,14 +5,26 @@ value   - base value to modify
 name    - name of the modifier
 params  - parameters of the modifier
 data    - array of data that is available for processing
-options - options 
+options - additional options for scalar modifier
 */
-apply = function(value, name, params, data, options) {
+function apply(value, name, params, data, options) {
 	options = options || {};
-    if (name == 'zeropad') {
-        var zeroes = '000000000000000000000';
-        var stringified = value.toString();
-        value = ((stringified.length < params.length) ? zeroes.slice(stringified.length-params.length) : '') + value;
+	switch(name) {
+		case 'uppercase':
+        	value = value.toString().toUpperCase();
+        	break;
+		case 'lowercase':
+        	value = value.toString().toLowerCase();
+        	break;
+		case 'length':
+        	value = value.toString().length;
+        	break;
+		case 'trim':
+        	value = value.toString().trim();
+        	break;
+		case 'htmlcomment':
+        	value = '<!--' + value.toString().toUpperCase() + '-->';
+        	break;
     }
 
     return value;
