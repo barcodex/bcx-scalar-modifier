@@ -22,7 +22,9 @@ We insist on keeping called this module scalar-modifier not only to have a more 
 
 ## Installation
 
+```
 npm install bcx-scalar-modifier
+```
 
 ## Quick example
 

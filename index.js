@@ -23,7 +23,7 @@ function apply(value, name, params, data, options) {
         	value = value.toString().trim();
         	break;
 		case 'htmlcomment':
-        	value = '<!--' + value.toString().toUpperCase() + '-->';
+        	value = '<!--' + value.toString() + '-->';
         	break;
     }
 
