@@ -20,6 +20,10 @@ It really works with scalar values, which means that expected values to modify a
 However, technically, numbers are also scalar values and string-modifier would be a better name in most cases to emphasize the fact that numbers are processed by different module.
 We insist on keeping called this module scalar-modifier not only to have a more similar interface to PHP version, but also because we will handle dates and times besides the strings.
 
+## Installation
+
+npm install bcx-scalar-modifier
+
 ## Quick example
 
 ```js
